@@ -1,9 +1,12 @@
 console.log('test')
 
+const likes_arr = [9, 12, 9]
+
 function like(el){
-    console.log(el)
-    const likes = document.querySelector(".count-0")
-    let num = parseInt(likes.innerHTML)
-    likes.innerHTML = num + 1;
+    let num = parseInt(el.value)
+    likes_arr[num] += 1
+    const likes = document.querySelector(`.count-${num}`)
+    likes.innerHTML = likes_arr[num];
+
 
 }
